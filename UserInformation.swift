@@ -41,6 +41,33 @@ class UserInformationController {
   override private func saveUserIncomeAmount(_ userIncomeAmount: Double) {
     userInformation.userIncomeAmount = userIncomeAmount
   }
+  override public func getUsername() {
+    return String(userInformation.username)
+  }
+  override public func getFirstname() {
+    return String(userInformation.firstname)
+  }
+  override static func getLastname() {
+    return String(userInformation.lastname)
+  }
+  override static func getFullname() {
+    return String(userInformation.firstname + " " + userInformation.lastname)
+  }
+  override static func getUserIdentity() {
+    return String(userInformation.userIdentity)
+  }
+  override static func getUserStatus() {
+    return Bool(userInformation.userStatus)
+  }
+  override static func getUserConnections() {
+    return Int(userInformation.userConnections)
+  }
+  override static func getUserAdvertisements() {
+    return Int(userInformation.userAdvertisements)
+  }
+  override static func getUserIncomeaAmount() {
+    return Double(userInformation.userIncomeAmount)
+  }
 }
 
 class HomeViewController: UIScreenViewController {
